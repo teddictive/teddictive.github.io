@@ -12,6 +12,9 @@ python3 -m http.server 8770
 (index.html을 더블클릭해도 열리지만, 그때는 페이지 이동이 일반 새로고침 방식이 됩니다.)
 
 ## 올리기
+공개 주소: https://teddictive.github.io/ (저장소 github.com/teddictive/teddictive.github.io, main 브랜치)
+수정 후 반영: `git add -A && git commit -m "수정" && git push` → 1~2분 뒤 사이트에 반영.
+
 폴더 전체를 GitHub Pages / Netlify / Vercel / Cloudflare Pages 등 정적 호스팅에 그대로 올리면 됩니다.
 `_source/` 폴더는 올리지 않아도 됩니다.
 
