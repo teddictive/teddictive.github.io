@@ -155,6 +155,8 @@
 		}).then(function (txt) {
 			var doc = new DOMParser().parseFromString(txt, 'text/html');
 			var next = doc.querySelector('.main_container');
+			// not one of our pages (e.g. an old DNS answer during a domain change): load it normally
+			if (!next) throw new Error('no content');
 			setTimeout(function () {
 				main.innerHTML = next.innerHTML;
 				document.title = doc.title;

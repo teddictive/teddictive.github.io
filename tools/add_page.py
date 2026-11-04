@@ -203,6 +203,10 @@ def main():
         open(path, 'w', encoding='utf-8').write(doc)
 
     print(f'완료: {slug}.html 생성, 이미지 {len(files)}장 복사, 메뉴와 썸네일을 {len(pages) + 1}개 페이지에 추가')
+    # shrink the new images and make the grid thumbnail (originals go to _원본이미지/)
+    if shutil.which('sips'):
+        import subprocess
+        subprocess.run([sys.executable, os.path.join(SITE, 'tools', 'optimize.py')])
 
 
 if __name__ == '__main__':
